@@ -29,17 +29,17 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get tag
+        id: repository
+        run: echo "tag=$(git rev-parse --short HEAD)" > $GITHUB_ENV
+
       - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@v4.3.0
         with:
           images: |
-            ghcr.io/${{ github.repository }}
             ${{ github.repository }}
-
-      - name: Get tag
-        id: repository
-        run: echo "tag=$(git rev-parse --short HEAD)" > $GITHUB_ENV
+            ghcr.io/***/testgithubaction:${{ env.tag }}
 
       - name: Build and push Docker image
         id: build-and-push
@@ -48,7 +48,7 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/***/testgithubaction:${{ env.tag }}
+          tags: ${{ steps.meta.outputs.tags }}
 
           
 
