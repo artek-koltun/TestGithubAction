@@ -49,6 +49,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+          tags: ghcr.io/***/testgithubaction:${{ env.tag }}
 
           
 
