@@ -38,6 +38,10 @@ jobs:
             ${{ github.repository }}
             ghcr.io/${{ github.repository }}
 
+      - name: Get tag
+        id: repository
+        run: echo "tag=$(git describe --tags HEAD)" > $GITHUB_ENV
+
       - name: Build and push Docker image
         id: build-and-push
         uses: docker/build-push-action@v4.0.0
@@ -52,4 +56,5 @@ jobs:
           #labels: ${{ steps.meta.outputs.labels }}
 
           
+
 
