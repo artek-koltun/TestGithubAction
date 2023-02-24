@@ -38,8 +38,8 @@ jobs:
         uses: docker/metadata-action@v4.3.0
         with:
           images: |
-            ***/${{ github.repository }}
-            ghcr.io/***/testgithubaction:${{ env.tag }}
+            ***/testgithubaction:main 
+            ghcr.io/***/testgithubaction:main
 
       - name: Build and push Docker image
         id: build-and-push
