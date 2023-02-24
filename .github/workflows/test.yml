@@ -45,9 +45,10 @@ jobs:
           context: .
           platforms: linux/amd64
           push: ${{ github.event_name != 'pull_request' }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          ghcr.io/${{ github.repository }}:${{ env.tag }}
+            #cache-from: type=gha
+            #cache-to: type=gha,mode=max
+            #tags: ${{ steps.meta.outputs.tags }}
+            #labels: ${{ steps.meta.outputs.labels }}
 
           
