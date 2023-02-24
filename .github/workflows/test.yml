@@ -34,8 +34,8 @@ jobs:
         uses: docker/metadata-action@v4.3.0
         with:
           images: |
-            ${{ github.repository }}
             ghcr.io/${{ github.repository }}
+            ${{ github.repository }}
 
       - name: Get tag
         id: repository
