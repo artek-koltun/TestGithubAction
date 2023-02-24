@@ -2,9 +2,9 @@ name: Test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ another ]
   pull_request:
-    branches: [ main ]
+    branches: [ another ]
 
 env:
   REGISTRY: ghcr.io
