@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "TESTING another"
+echo "TESTING another!"
 
 exit 0
 
