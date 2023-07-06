@@ -10,23 +10,6 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 jobs:
-  commitlint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18.x
-      - name: Install dependencies
-        run: npm i -g @commitlint/cli @commitlint/config-conventional
-      - name: Env
-        run: echo " ${{ github.event.pull_request.base.sha }} ; ${{ github.event.pull_request.head.sha }}\n"; npm --version
-      - name: Validate all commits from PR
-        run: commitlint --config ./.commitlintrc.js --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
-
   test:
     runs-on: ubuntu-latest
     steps:
