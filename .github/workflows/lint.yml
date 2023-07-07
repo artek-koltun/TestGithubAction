@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 jobs:
   commitlint:
@@ -20,6 +23,16 @@ jobs:
       - name: Install dependencies
         run: npm i -g @commitlint/cli @commitlint/config-conventional
       - name: Validate all commits from PR
+        if: github.event_name == 'pull_request'
         run: commitlint --config ./.commitlintrc.json --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+      - name: Determine commit range
+        id: commit-range
+        if: github.event_name == 'push'
+        run: |
+          RANGE=$(git log --ancestry-path ${GITHUB_SHA} ^${GITHUB_BASE_REF} --format="%H" | tac | tr '\n' ' ')
+          echo "::set-output name=range::${RANGE}"
+      - name: Validate all commits on pushed commits
+        if: github.event_name == 'push'
+        run: commitlint --config ./.commitlintrc.json --from=HEAD~${{ github.event_size }} --to=HEAD
 
 
