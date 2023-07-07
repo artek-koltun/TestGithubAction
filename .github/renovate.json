@@ -1,10 +1,11 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
-		"config:base"
+		"config:base",
+		":semanticCommitTypeAll(ci)"
 	],
 	"schedule": [
-    		"every month on the first day of the month"
+    		"* 0 2 * *"
   	],
 	"packageRules": [
 		{
