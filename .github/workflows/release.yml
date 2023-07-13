@@ -1,0 +1,21 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  release-docker:
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
+  release-signing:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: signing
+        run: |
+          echo "RELEASE!"
+          echo "12345abcdef" > release.sig
+    
+
