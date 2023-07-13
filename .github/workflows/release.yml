@@ -6,16 +6,6 @@ on:
     types: [published]
 
 jobs:
-  release-docker:
-    runs-on: ubuntu-latest
-    permisisons:
-      contents: read
-      packages: write
-      id-token: write
-    steps:
-      - name: build
-        uses: ./.github/workflows/test.yml
-    secrets: inherit
   release-signing:
     runs-on: ubuntu-latest
     steps:
