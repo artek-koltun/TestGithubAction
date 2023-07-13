@@ -6,11 +6,11 @@ on:
     types: [published]
 
 jobs:
-  permisisons:
-    contents: read
-    packages: write
-    id-token: write
   release-docker:
+    permisisons:
+      contents: read
+      packages: write
+      id-token: write
     uses: ./.github/workflows/test.yml
     secrets: inherit
   release-signing:
