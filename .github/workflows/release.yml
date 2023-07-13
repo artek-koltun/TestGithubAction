@@ -6,6 +6,10 @@ on:
     types: [published]
 
 jobs:
+  permisisons:
+    contents: read
+    packages: write
+    id-token: write
   release-docker:
     uses: ./.github/workflows/test.yml
     secrets: inherit
