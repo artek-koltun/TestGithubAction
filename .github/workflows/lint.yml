@@ -13,19 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20.x
-      - name: Install dependencies
-        run: npm i -g @commitlint/cli @commitlint/config-conventional
-      - name: Validate all commits from PR
-        if: github.event_name == 'pull_request'
-        run: commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
-      - name: Validate all commits on pushed commits
-        if: github.event_name == 'push'
-        run: commitlint --from=${{ github.event.before }} --verbose
+      - uses: ahmadnassri/action-commit-lint@v2.0.4
 
 
