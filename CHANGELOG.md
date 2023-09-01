@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0](https://github.com/artek-koltun/TestGithubAction/compare/v0.3.8...v0.4.0) (2023-09-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **2:** important change 13
+
+### Features
+
+* 12 ([7677c96](https://github.com/artek-koltun/TestGithubAction/commit/7677c967bc4a666e5a1fcbe676b026c5eacf49bb))
+* **2:** important change 13 ([09d70b6](https://github.com/artek-koltun/TestGithubAction/commit/09d70b66504d61149ab22148cf146e2ae87dd01a))
+* **2:** not so important feature 14 ([da48191](https://github.com/artek-koltun/TestGithubAction/commit/da481919e7fd15bc29e960988503628c389dbdbb))
+
 ## [Unreleased]
 
 ## [1.1.1] - 2023-03-05
@@ -239,4 +252,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.0.3]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.2...v0.0.3
 [0.0.2]: https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.0.1
-
