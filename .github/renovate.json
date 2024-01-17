@@ -5,13 +5,36 @@
 		":semanticCommitTypeAll(ci)"
 	],
 	"schedule": [
-    		"* 0 2 * *"
-  	],
+		"* 0 2 * *"
+	],
 	"packageRules": [
 		{
-			"matchUpdateTypes": ["digest"],
+			"matchUpdateTypes": [
+				"digest"
+			],
 			"automerge": true
+		}
+	],
+	"regexManagers": [
+		{
+			"fileMatch": [
+				"(^|\\/)buf.gen.yaml"
+			],
+			"matchStrings": [
+				"grpc/python:(?<currentValue>.*?)\\s"
+			],
+			"datasourceTemplate": "github-tags",
+			"depNameTemplate": "grpc/grpc"
+		},
+		{
+			"fileMatch": [
+				"(^|\\/)buf.gen.yaml"
+			],
+			"matchStrings": [
+				"protocolbuffers/python:(?<currentValue>.*?)\\s"
+			],
+			"datasourceTemplate": "github-tags",
+			"depNameTemplate": "protocolbuffers/protobuf"
 		}
 	]
 }
-
