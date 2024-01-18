@@ -2,9 +2,7 @@ module github.com/artek-koltun/TestGuthubAction
 
 go 1.21
 
-require (
-	github.com/vektra/mockery/v2 v2.40.0
-)
+require github.com/vektra/mockery/v2 v2.38.0
 
 require (
 	github.com/chigopher/pathlib v0.19.1 // indirect
