@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0](https://github.com/artek-koltun/TestGithubAction/compare/v0.4.0...v0.5.0) (2024-01-19)
+
+
+### Features
+
+* **2:** new awesome feature 14 ([5a8e76e](https://github.com/artek-koltun/TestGithubAction/commit/5a8e76e5b484b35a28cd3a6cd6afb00bb7f4c94f))
+* add hi go app ([32f11b5](https://github.com/artek-koltun/TestGithubAction/commit/32f11b53ec0da44ba75619e3d0276d4e82c015b8))
+
 ## [0.4.0](https://github.com/artek-koltun/TestGithubAction/compare/v0.3.8...v0.4.0) (2023-09-01)
 
 
