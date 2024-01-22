@@ -35,6 +35,26 @@
 			],
 			"datasourceTemplate": "github-tags",
 			"depNameTemplate": "protocolbuffers/protobuf"
+		},
+		{
+			"fileMatch": [
+				"(^|\\/)buf.gen.yaml"
+			],
+			"matchStrings": [
+				"protocolbuffers/go:(?<currentValue>.*?)\\s"
+			],
+			"datasourceTemplate": "github-tags",
+			"depNameTemplate": "protocolbuffers/protobuf-go"
+		},
+		{
+			"fileMatch": [
+				"(^|\\/)buf.gen.yaml"
+			],
+			"matchStrings": [
+				"grpc-ecosystem/gateway:(?<currentValue>.*?)\\s"
+			],
+			"datasourceTemplate": "github-tags",
+			"depNameTemplate": "grpc-ecosystem/grpc-gateway"
 		}
 	]
 }
