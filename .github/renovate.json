@@ -15,6 +15,9 @@
 			"automerge": true
 		}
 	],
+	"constraints": {
+		"go": "1.19"
+	},
 	"regexManagers": [
 		{
 			"fileMatch": [
