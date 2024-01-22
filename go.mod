@@ -2,7 +2,10 @@ module github.com/artek-koltun/TestGuthubAction
 
 go 1.19
 
-require github.com/vektra/mockery/v2 v2.40.0
+require (
+	github.com/spdk/spdk/go/rpc v0.0.0-20240118091712-b0eb3ed8f752
+	github.com/vektra/mockery/v2 v2.40.0
+)
 
 require (
 	github.com/chigopher/pathlib v0.19.1 // indirect
