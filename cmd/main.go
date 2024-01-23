@@ -2,10 +2,10 @@ package main
 
 import (
 	"log"
-
-	"github.com/spdk/spdk/go/rpc/client"
+	// "github.com/spdk/spdk/go/rpc/client"
 )
 
 func main() {
-	log.Println("Hi:", client.Unix)
+	log.Println("Hi")
+	// log.Println("Hi:", client.Unix)
 }
