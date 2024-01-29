@@ -6,7 +6,7 @@ plugins:
 - plugin: buf.build/grpc/go:v1.2.0
   out: gen/go
   opt: paths=source_relative
-- name: buf.build/grpc-ecosystem/gateway:v2.18.0
+- name: buf.build/grpc-ecosystem/gateway:v2.19.1
   out: ./gen/go
   opt: paths=source_relative
 - plugin: buf.build/grpc/python:v1.59.0
