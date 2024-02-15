@@ -11,5 +11,5 @@ plugins:
   opt: paths=source_relative
 - plugin: buf.build/grpc/python:v1.59.0
   out: gen/python
-- plugin: buf.build/protocolbuffers/python:v25.0
+- plugin: buf.build/protocolbuffers/python:v25.3
   out: gen/python
